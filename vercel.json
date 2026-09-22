@@ -18,6 +18,78 @@
           "value": "public, max-age=0, s-maxage=0, must-revalidate"
         }
       ]
+    },
+    {
+      "source": "/favicon.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/deck",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/deck.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/deck.pdf",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/demo",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/demo.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/demo.mp4",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/demo-poster.jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0, must-revalidate"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -25,6 +97,16 @@
       "source": "/i",
       "destination": "https://raw.githubusercontent.com/effortprogrammer/geojirouter/main/install.sh",
       "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/deck",
+      "destination": "/deck.html"
+    },
+    {
+      "source": "/demo",
+      "destination": "/demo.html"
     }
   ]
 }

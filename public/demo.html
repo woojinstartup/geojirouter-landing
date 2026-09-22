@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>거지라우터 — 데모</title>
+    <meta name="description" content="무료로 쓸 수 있는 AI를 한곳에 모아주는 오픈소스 로컬 게이트웨이. 31초 데모." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="거지라우터 — 데모" />
+    <meta property="og:description" content="무료로 쓸 수 있는 AI를 한곳에 모아주는 오픈소스 로컬 게이트웨이. 31초 데모." />
+    <meta property="og:image" content="https://geojirouter.vercel.app/demo-poster.jpg" />
+    <meta property="og:video" content="https://geojirouter.vercel.app/demo.mp4" />
+    <meta name="twitter:card" content="player" />
+    <meta name="twitter:image" content="https://geojirouter.vercel.app/demo-poster.jpg" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0b0d;
+        --fg: #ededf0;
+        --dim: #8a8a94;
+        --line: rgba(255, 255, 255, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        padding: 48px 16px;
+      }
+      header {
+        width: 100%;
+        max-width: 1080px;
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--dim);
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 5vw, 40px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      p.lead {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--dim);
+      }
+      video {
+        width: 100%;
+        max-width: 1080px;
+        aspect-ratio: 1720 / 992;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #000;
+        display: block;
+      }
+      nav {
+        width: 100%;
+        max-width: 1080px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      a {
+        padding: 10px 16px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        color: var(--fg);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+      }
+      a:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.24);
+      }
+      a.primary {
+        background: #fff;
+        color: #0b0b0d;
+        border-color: #fff;
+      }
+      a.primary:hover {
+        background: #e4e4e8;
+      }
+      footer {
+        width: 100%;
+        max-width: 1080px;
+        font-size: 13px;
+        color: var(--dim);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">Open source · AI gateway</p>
+      <h1>거지라우터 데모</h1>
+      <p class="lead">무료로 쓸 수 있는 AI를 한곳에 모아주는 오픈소스 로컬 게이트웨이. 31초.</p>
+    </header>
+
+    <video src="/demo.mp4" poster="/demo-poster.jpg" controls autoplay muted loop playsinline preload="metadata"></video>
+
+    <nav>
+      <a class="primary" href="/">서비스 페이지</a>
+      <a href="/deck">발표자료</a>
+      <a href="/deck.pdf">발표자료 PDF</a>
+      <a href="https://github.com/effortprogrammer/geojirouter" target="_blank" rel="noopener">GitHub</a>
+      <a href="/demo.mp4" download>영상 내려받기</a>
+    </nav>
+
+    <footer>geojirouter.vercel.app</footer>
+  </body>
+</html>

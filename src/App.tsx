@@ -61,9 +61,9 @@ const STEPS: {
         ["$ ", "dim"],
         ["curl ", "cmd"],
         ["-fsSL ", "flag"],
-        ["https://geojirouter.vercel.app/i", "url"],
+        ["https://raw.githubusercontent.com/effortprogrammer/geojirouter/main/install.sh", "url"],
         [" | ", "punc"],
-        ["sh", "sub"],
+        ["bash", "sub"],
       ],
       [],
       [["거지라우터 실행 중", "dim"]],
@@ -146,7 +146,7 @@ function Terminal({ lines }: { lines: readonly CodeLine[] }) {
         <span className="size-2 rounded-full bg-white/18" />
         <span className="size-2 rounded-full bg-white/18" />
       </div>
-      <pre className="mono overflow-x-auto px-4 py-3.5 text-[11.5px] leading-[1.9]">
+      <pre className="mono px-4 py-3.5 text-[11.5px] leading-[1.9] break-all whitespace-pre-wrap">
         {lines.map((toks, i) => (
           <div key={i}>
             {toks.length === 0
@@ -246,7 +246,7 @@ const HOLD_MS = 4200
  * 히어로 비주얼 — 가입이 실제로 돌아가는 화면.
  * 한 줄씩 찍히고, 다 차면 잠깐 머물렀다 처음부터 다시.
  */
-const INSTALL = "curl -fsSL https://geojirouter.vercel.app/i | sh"
+const INSTALL = "curl -fsSL https://raw.githubusercontent.com/effortprogrammer/geojirouter/main/install.sh | bash"
 
 /** 설치 한 줄 + 복사. 복사되면 버튼이 잠깐 체크로 바뀐다. */
 function InstallCommand() {
@@ -270,7 +270,7 @@ function InstallCommand() {
   return (
     <div className="mb-6 flex max-w-full items-center gap-3 rounded-lg border border-white/10 bg-black/50 py-2.5 pr-2 pl-4 sm:inline-flex">
       <span className="mono shrink-0 text-[13px] text-white/35">$</span>
-      <span className="mono min-w-0 overflow-x-auto whitespace-nowrap text-[13px] text-white/85">
+      <span className="mono min-w-0 break-all text-[13px] leading-relaxed text-white/85">
         {INSTALL}
       </span>
       <button
@@ -346,17 +346,13 @@ export default function App() {
           {/* 카피 */}
           <div className="min-w-0">
             <p className="mono mb-6 text-[13px] text-white/45">쉬었음 청년들을 위한 모두의 게이트웨이</p>
-            <h1 className="display mb-7 text-[clamp(2rem,4.8vw,3.15rem)]">
-              무료로 AI
-              <br />
-              사용하세요
-            </h1>
+            <h1 className="display mb-7 text-[clamp(2rem,4.8vw,3.15rem)]">AI에 돈 쓰지 마세요</h1>
             <div className="mb-8 max-w-[30em] space-y-4 text-[15px] leading-[1.8] text-white/65">
               <p>
-                AI 모델을 무료로 쓸 수 있는 곳은 생각보다 많습니다. 문제는 매번 찾아다니고, 키를 관리하고, 한도가
-                끝날 때마다 다른 곳으로 옮겨야 한다는 겁니다.
+                무료로 쓸 수 있는 AI는 많습니다.
+                <br />
+                거지라우터가 한곳에 모아줍니다.
               </p>
-              <p>거지라우터는 흩어져 있는 무료 AI 경로를 하나의 API로 묶어줍니다.</p>
             </div>
 
             <InstallCommand />
